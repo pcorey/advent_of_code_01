@@ -11,6 +11,9 @@ defmodule AdventOfCode01 do
   iex> AdventOfCode01.which_floor "(("
   2
 
+  iex> AdventOfCode01.which_floor "()("
+  1
+
   """
   def which_floor(directions) do
     directions
@@ -20,5 +23,6 @@ defmodule AdventOfCode01 do
   end
 
   defp handle_direction("("), do: 1
+  defp handle_direction(")"), do: -1
 
 end
